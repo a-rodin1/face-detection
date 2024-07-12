@@ -4,10 +4,6 @@ from PIL import Image, ImageDraw
 from facenet_pytorch import MTCNN
 import torch
 
-# Pick the device for processing neural networks, a GPU if available or CPU otherwise
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-print('Running on device: {}'.format(device))
-
 # Initialize the neural network
 mtcnn = MTCNN(keep_all=True, device='cpu')
 
